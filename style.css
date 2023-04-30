@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*container */
+.container {
+    background-color: white;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    border: 3px solid black ;
+    height: 800px;
+    overflow-y: scroll;
+      
+}
+
+/* form header */
+.container header {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+/* .DETAILS - form container */
+.container .details {
+    position: relative;
+    min-height: 500px;
+    margin: 30px 0px 0px 0px;
+}
+/* .FIELDS - textboxes divs container*/
+.container .details .fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* to divide the column into three */
+.details .fields .textbox{
+    display: flex;
+    width: calc(100% / 3 - 10px);
+    flex-direction: column;
+}
+/* text labels */
+label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: #001f3f;
+}
+/* borders for the textbox, date, email, select, and textarea tag */
+input[type="text"] {
+    border: 1px solid #3D9970;
+}
+
+input[type="date"] {
+    border: 1px solid #3D9970;
+}
+
+input[type="email"] {
+    border: 1px solid #3D9970;
+}
+
+select {
+    border: 1px solid #3D9970;
+}
+
+textarea {
+    border: 1px solid #3D9970;
+}
+    
+/* style for the textbox */
+.textbox input {
+    height: 40px;
+    font-weight: 500;
+    color: #001f3f;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 0px 10px;
+}
+
+.container .details .fields2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+/* to divide the column into two */
+
+.details .fields2 .textbox{
+    display: flex;
+    width: calc(100% / 2 - 20px);
+    flex-direction: column;
+}
+
+.container .details .fields3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+/* for one column textbox */
+.details .fields3 .textbox{
+    display: flex;
+    width: calc(100%);
+    flex-direction: column;
+}
+/* style for select tag */
+input [type=text], select {
+    width: 100%;
+    padding: 13px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #3D9970;
+    color: white;
+    border-radius: 3px;
+}
+/* style for select tag options */
+option {
+    background-color: #3c6452;
+}
+/* to remove default style of select tag */
+input[type="select"] {
+    display: none;
+}
+/* style option when chosen */
+select option:checked {
+    background-color: #3c6452 ;
+    color: #fff;
+    outline: none; /* remove the default blue highlight */
+}
+/* hides the file upload input element. */
+input[type="file"] {
+    display: none; 
+}
+/* style for label of file tag */
+.file-label {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background: #3D9970 ;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
+/* to center the resume insert file button */
+.resume {
+    margin: 30px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* style for textarea */
+.textarea {
+    background-color: #ddd;
+    color: #666;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px soid transparent;
+    outline: none;
+    font-weight: 500;
+    height: 175px;
+    margin-top: 10px;
+}
+/* style for radio tag */
+.gender {
+    height: 100px;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    padding: 20px 15px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* style for radio options */
+.gender .option {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0 10px ;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #3D9970;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease;
+}
+/* style when radio option is chosen */
+#option-1:checked ~ .option-1, #option-2:checked ~ .option-2,
+#option-3:checked ~ .option-3, #option-4:checked ~ .option-4 {
+    background-color: #3D9970 ;
+    background: #3D9970 ;
+}
+/* stle for the radio customize dot */
+.gender .option .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+/* style for the green customize dot */
+.gender .option .dot::before{
+    position: absolute;
+    content: "";
+    left: 4px;
+    top: 4px;
+    height: 12px;
+    width: 12px;
+    background: #3D9970 ;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+/* animation for the green customize dot */
+#option-1:checked ~ .option-1 .dot::before, #option-2:checked ~ .option-2 .dot::before,
+#option-3:checked ~ .option-3 .dot::before, #option-4:checked ~ .option-4 .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* change to white label for gender options after click */
+#option-1:checked ~ .option-1 span, #option-2:checked ~ .option-2 span,
+#option-3:checked ~ .option-3 span, #option-4:checked ~ .option-4 span{
+    color: white;
+}
+/* to hide default radio tag */
+.gender input[type="radio"] {
+    display: none;
+}
+
+/* Change the background color of the button */
+button[type="submit"] {
+    background-color: lightgrey;
+    color: gray; /* Change the text color to white */
+    border: none; /* Remove the button border */
+    padding: 20px 32px; /* Add some padding to the button */
+    border-radius: 4px; /* Round the button corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+  
+/* Add hover and focus styles to the button */
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #3D9970;
+    outline: none; /* Remove the default outline on focus */
+    color: white;
+  }
+/* style for submit button */
+  .button {
+    display: flex;
+    justify-content:end;
+    align-items: end;
+  }
