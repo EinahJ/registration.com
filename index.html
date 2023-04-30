@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGISTRATION FORM</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="icon.png" type="image/x-icon"/>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div class="container">
+            <header>SJ Employee Registration Form</header>
+            <form class="details" action="success.html" method="post">
+                        <div class="fields">
+
+                            <div class="textbox">
+                                <label>Full Name</label><br>
+                                <input type="text"  id="fname" placeholder="First Name" pattern="[a-zA-Z]+" required>
+                                <input type="text"  id="lname" placeholder="Last Name" pattern="[a-zA-Z]+" required>
+                            </div>
+
+                            <div class="textbox">
+                                <label>Date of Birth</label><br>
+                                <input type="date" placeholder="MM-DD-YYYY" maxlength="8" required>
+                            </div>
+
+                            <div class="textbox">
+                                <label>Email</label><br>
+                                <input type="email" placeholder="example@example.com" required>
+                            </div>  
+
+                         </div>
+
+                            <div class="fields2">
+
+                                <div class="textbox">
+                                    <label>Password</label><br>
+                                    <input type="text" minlength="" placeholder="Password" required>
+                                </div>
+
+                                <div class="textbox">
+                                    <label>Phone Number</label><br>
+                                    <input type="text" value="" pattern="[0-9]+" maxlength="11" minlength="11" placeholder="(09) 00-000-0000" required>
+                                </div>
+
+                            </div>
+
+                            <div class="fields3">
+
+                                <div class="textbox">
+                                    <label>Street Address</label><br>
+                                    <input type="text" placeholder="[House Number] [Street Name]" required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="fields3">
+
+                                <div class="textbox">
+                                    <label>Street Address Line 2</label><br>
+                                    <input type="text" placeholder="[Apartment or Unit Number (if applicable)]" required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="fields2">
+
+                                <div class="textbox">
+                                    <label>City</label><br>
+                                    <input type="text" pattern="[a-zA-Z\s]+" placeholder="City" required>
+                                </div>
+
+                                <div class="textbox">
+                                    <label>State/Province</label><br>
+                                    <input type="text" value="" pattern="[a-zA-Z\s]+" placeholder="State or Province" required>
+                                </div>
+
+                            </div>
+
+                            <div class="fields3">
+
+                                <div class="textbox">
+                                    <label>Postal/Zip Code</label><br>
+                                    <input type="text" pattern="[0-9-+]+" placeholder="ex. 1470" maxlength="4" required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="fields3">
+
+                                <div class="textbox">
+                                    <label>Applying Position</label><br>
+                                    <input type="text" pattern="[a-zA-Z\s]+" placeholder="ex. Software Developer" required>
+                                </div>
+                                
+                            </div>
+
+                            <div class="w-select">
+                                <label for="work">Type of Work</label><br>
+                                <select id="work">
+                                    <option value=""> Select type of work</option>
+                                    <option value="P"> Permanent</option>
+            
+                                    <option value="T"> Temporary</option>
+                                    <option value="B"> Both</option>
+                                    <option value="O"> Other</option>
+                                </select>
+                             </div>
+                             
+                             <label for="textarea">Cover Letter or Additional Information</label><br>
+                             <textarea name="Suggestions" class="textarea" placeholder="Enter a message..." cols="54"></textarea><br>
+
+                             <div class="w-select">
+                                <label for="veteran">Veteran Status</label><br>
+                                <select id="veteran">
+                                    <option value="null">  Select veteran status</option>
+                                    <option value="veteran">  I am a veteran</option>
+                                    <option value="s-veteran"> I am recently separated veteran</option>
+                                    <option value="not-veteran"> I am not a veteran</option>
+                                    <option value="sd-veteran"> I am a special disabled veteran</option>
+                                    <option value="p-veteran"> I am an other protected veteran</option>
+                                    <option value="no-ans"> Prefer not to answer</option>
+                                </select>
+                             </div>
+
+                             <label for="gender">Gender</label>
+                             <div class="gender">
+
+                                <input type="radio" name="select" id="option-1">
+                                <input type="radio" name="select" id="option-2">
+                                <input type="radio" name="select" id="option-3">
+                                <input type="radio" name="select" id="option-4">
+
+                                <label for="option-1" class="option option-1">
+                                    <div class="dot"></div>
+                                    <span>Female</span>
+                                </label>
+
+                                <label for="option-2" class="option option-2">
+                                    <div class="dot"></div>
+                                    <span>Male</span>
+                                </label>
+
+                                <label for="option-3" class="option option-3">
+                                    <div class="dot"></div>
+                                    <span>Not Listed</span>
+                                </label>
+
+                                <label for="option-4" class="option option-4">
+                                    <div class="dot"></div>
+                                    <span>Prefer not to answer</span>
+                                </label>
+
+                             </div>
+
+                             <div class="w-select">
+                                <label for="disability">Disabilities</label><br>
+                                <select id="disability">
+                                    <option value="">  Select type of disability</option>
+                                    <option value="none-d">  I have no disability</option>
+                                    <option value="two"> I have two or more impairments and/or disabling medical conditions</option>
+                                    <option value="sld"> I have a Specific Learning Difficulty (e.g Dyslexia/Dyspraxia/ADHD)</option>
+                                    <option value="sci"> I have a social/communication impairment such as Asperger's syndrome/other autistic spectrum disorder</option>
+                                    <option value="lsi"> I have a long standing illness or health condition such as Cancer, HIV, Diabetes, Chronic Heart Disease, or Epilepsy</option>
+                                    <option value="pi-mi"> I have a physical impairment or mobility issues (e.g difficulty using arms/ using a wheelchair or crutches)</option>
+                                    <option value="deaf"> I am deaf or have a serious hearing impairment</option>
+                                    <option value="blind"> I am blind or have a serious visual impairment uncorrected by glasses</option>
+                                    <option value="no-ans"> Prefer not to answer</option>
+                                    <option value="no-list"> I have a disability, impairment, or medical conditions not listed here</option>
+                                </select>
+                             </div>
+
+                             <div class="resume">
+                                <input type="file" id="file" name="photo" accept=".pdf,.doc,.docx"/>
+                                <label for="file" class="file-label"><i class="fa fa-upload"></i>
+                                   Please Upload Resume
+                                </label><br>
+                                </div>
+
+                            <div class="button">
+                                <button type="submit">Submit</button>
+                            </div>
+            </form>
+        </div> 
+    </body>
+</html>
+                                    
