@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* style for the popup container */
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+.close-popup{
+    visibility: hidden; /*to hide the popup after clicking ok button */
+}
+/* style for check image */
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* style for the popup header */
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+/* style for ok button */
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #3D9970;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+/* style for login box */
+#login-box {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  padding: 40px;
+  border-radius: 5px;
+}
+/* style for the login header */
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/* style for login textboxes */
+.text-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+/* style for login button */
+button {
+  width: 320px;
+  background-color: #3D9970;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+/* color change when button is hovered */
+button:hover {
+  background-color: #21533d;
+}
+/* style for register here link */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+/* to remove underline to the link */
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* change textbox border if invalid input */
+.log-error{
+    border-style: solid 1px;
+    border-color: red;
+}
+/* style for not registered? click here */
+p {
+    text-align: center;
+}
+
+    </style>
+        <title>Success!</title>
+        <link rel="icon" href="check.png" type="image/x-icon"/>
+    </head>
+    <body>
+        <div id="login-box">
+            <h2>Welcome</h2>
+            <input id="email" type="email" class="text-box" placeholder="Email or phone number"/><br>
+            <input id="pass" type="password" class="text-box" placeholder="Password"/><br>
+            <button id="btn" onclick="clickLogin()">Log In</button><br>
+            <p>Not registered?<a href="reg.html"> Sign up here</a></p>
+        </div>
+
+        <div class="popup" id="popup">
+            <img src="check.png">
+            <h2>Success!</h2>
+            <p>Your details has been successfully registered. Thank You!</p>
+            <button type="button" onclick="closePopup()">Proceed</button>
+        </div>
+    </body>
+    <script>
+        function closePopup(){
+            popup.classList.add("close-popup");
+        }
+
+        function clickLogin(){
+    
+    var loginTextbox = document.getElementById('email');
+    var passTextbox = document.getElementById('pass');
+
+    if(loginTextbox.value=='' || passTextbox.value==''){
+        alert('All fields are required!'); //if no email and pass
+    }
+    else{
+        alert('Login Successfully!');
+    }
+    if(loginTextbox.value==''){
+        loginTextbox.classList.add('log-error'); //red border if no email
+    }
+    else{
+        loginTextbox.classList.remove('log-error'); //remove red after email is input
+    }
+    if(passTextbox.value==''){
+        passTextbox.classList.add('log-error'); //red border if no pass
+    }
+    else{
+        passTextbox.classList.remove('log-error'); //remove red after pass is input
+    }
+    
+}
+       </script>
+</html>
